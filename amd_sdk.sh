@@ -6,7 +6,7 @@ if [ ! -x /usr/bin/wget ] ; then
 fi
 
 # Location from which to download
-url1="http://developer.amd.com/tools-and-sdks/opencl-zone/opencl-tools-sdks/"
+url1="http://developer.amd.com/tools-and-sdks/opencl-zone/"
 url2="amd-accelerated-parallel-processing-app-sdk/download-archive/"
 url=$url1$url2
 
