@@ -21,12 +21,12 @@ if [ $kernel == "x86_64" ] # 64-bit version
 then  
     echo "64-bit kernel detected"
     value1=`wget -qO - $url | sed -n '/download-2/,/64-bit/p'`
+    value2='QU1ELUFQUC1TREstdjIuOC4xLjAtbG54NjQudGd6'
 else # 32-bit version
     echo "32-bit kernel detected"
     value1=`wget -qO - $url | sed -n '/download-1/,/32-bit/p'`
+    value2='QU1ELUFQUC1TREstdjIuOC4xLjAtbG54MzIudGd6'
 fi
-
-value2='QU1ELUFQUC1TREstdjIuOC4xLjAtbG54MzIudGd6'
 
 value1=`echo $value1 | awk -F 'value="' '{print $2}'`
 value1=`echo $value1 | awk -F'"' '{print $1}'`
